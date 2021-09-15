@@ -21,7 +21,7 @@ namespace PasswordMigration
     {
         static void Main(string[] args)
         {
-            dynamic jsonArray = JArray.Parse(File.ReadAllText(@"/Users/meeshoogendoorn/code/nodePackages/passwordMigration/Kippie_ShopAccounts.json"));
+            dynamic jsonArray = JArray.Parse(File.ReadAllText(@"PATH_TO_READ.json"));
             Console.Write(jsonArray);
             foreach(var c in jsonArray)
             {
@@ -33,7 +33,7 @@ namespace PasswordMigration
             }
                 
                 Console.Write(jsonArray);
-                File.WriteAllText(@"/Users/meeshoogendoorn/code/nodePackages/passwordMigration/passwords_converted.json", jsonArray.ToString());
+                File.WriteAllText(@"PATH_TO_RESULT.json", jsonArray.ToString());
         }
 
         static string convert(string hash)
